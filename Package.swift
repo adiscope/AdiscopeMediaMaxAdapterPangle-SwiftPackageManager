@@ -35,7 +35,7 @@ let package = Package(
         .binaryTarget(
             name: "AdiscopeMediaMaxAdapterPangleMediationAdapter",
             url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.0.0/AppLovinMediationByteDanceAdapter.xcframework.zip",
-            checksum: "bc75fa474314ed166aea9bfcc118d3abcdce4da24d213161eae97393a9f5c8a6"
+            checksum: "d21dbfe23051d18b4416c1fd79ef689d9e81826d598bd8ac16faeb89271e9b51"
         ),
     ]
 )
