@@ -13,23 +13,29 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.1.0"),
-        .package(url: "https://github.com/adiscope/Adiscope-iOS-Pangle.git", exact: "4.2.1"),
+        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.4.0"),
+        .package(url: "https://github.com/bytedance/AdsGlobalPackage.git", exact: "7.4.1-release.1"),
     ],
     targets: [
         .target(
             name: "AdiscopeMediaMaxAdapterPangleTarget",
             dependencies: [
                 .target(name: "AdiscopeMediaMaxAdapterPangle"),
+                .target(name: "AdiscopeMediaMaxAdapterPangleMediationAdapter"),
                 .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
-                .product(name: "AdiscopeWithPangle", package: "Adiscope-iOS-Pangle"),
+                .product(name: "AdsGlobalPackage", package: "AdsGlobalPackage"),
             ],
             path: "Sources"
         ),
         .binaryTarget(
             name: "AdiscopeMediaMaxAdapterPangle",
-            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/4.4.1/AdiscopeMediaMaxAdapterPangle.zip",
-            checksum: "d204d53c563374c53637523acee97d830162d8f8c57675b1258b78e6856cbedf"
+            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.0.0/AdiscopeMediaMaxAdapterPangle.zip",
+            checksum: "5789ac9aa5dad8e165b2b2d09eed542bc36d8d8017f79642c0110e8aba0c241c"
+        ),
+        .binaryTarget(
+            name: "AdiscopeMediaMaxAdapterPangleMediationAdapter",
+            url: "https://github.com/adiscope/Adiscope-iOS-Sample/releases/download/5.0.0/AppLovinMediationByteDanceAdapter.xcframework.zip",
+            checksum: "bc75fa474314ed166aea9bfcc118d3abcdce4da24d213161eae97393a9f5c8a6"
         ),
     ]
 )
